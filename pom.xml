@@ -11,6 +11,7 @@
     <modules>
         <module>zeus-rpc</module>
         <module>zeus-common</module>
+        <module>zeus-demo</module>
     </modules>
 
 
