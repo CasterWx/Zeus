@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloService {
+
     @RequestMapping(value = "/hello")
     public String hello() {
         return "Hello! " ;
