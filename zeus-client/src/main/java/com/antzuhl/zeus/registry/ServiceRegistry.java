@@ -4,26 +4,34 @@ import org.apache.zookeeper.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-
+import org.springframework.core.env.Environment;
 import java.io.IOException;
-import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
 @Component
-public class ServiceRegistry {
+public class ServiceRegistry  {
+
+    @Autowired
+    private Environment env; //不需要getter setter方法
 
     private static final Logger logger = LoggerFactory.getLogger(ServiceRegistry.class);
 
     private CountDownLatch latch = new CountDownLatch(1);
 
-    @Value("${zookeeper.address}")
     private String registryAddress;
 
     public ServiceRegistry() {
+        if (env==null){
+        }
+        env.getProperty("zookeeper.address");
         System.out.println("1");
     }
+
+    static {
+        System.out.println("1");
+    }
+
 
     /*
      * Funciation : 注册节点

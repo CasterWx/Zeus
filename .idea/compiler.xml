@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="zeus-rpc" />
+        <module name="zeus-client" />
         <module name="common" />
         <module name="rpc" />
         <module name="zeus-common" />
