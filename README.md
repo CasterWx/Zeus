@@ -1,7 +1,7 @@
 # Zeus
 
 <p align="center">
-<img src="/images/logo.png" alt="Zeus" width="100">
+<img src="/images/logo.png" alt="Zeus">
 </p>
 
 ![](https://img.shields.io/badge/zeus-1.0-orange)       ![](https://img.shields.io/badge/license-apache-brightgreen)
