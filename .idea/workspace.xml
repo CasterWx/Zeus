@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3d9a2ca9-ed9b-4dd7-a941-55f1cdd024ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zeus-demo/src/main/java/com/zeus/demo/ZeusDemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/zeus-demo/src/main/java/com/zeus/demo/ZeusDemoApplication.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -123,8 +121,7 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="148">
-                <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+              <first_editor>
                 <folding>
                   <element signature="e#243#244#0" expanded="true" />
                   <element signature="e#313#314#0" expanded="true" />
@@ -536,7 +533,7 @@
       <workItem from="1577374551764" duration="896000" />
       <workItem from="1577375464782" duration="1585000" />
       <workItem from="1577414339762" duration="6945000" />
-      <workItem from="1577445982551" duration="7088000" />
+      <workItem from="1577445982551" duration="7358000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <created>1577343490453</created>
@@ -566,11 +563,32 @@
       <option name="project" value="LOCAL" />
       <updated>1577452434441</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="readme">
+      <created>1577453207485</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1577453207485</updated>
+    </task>
+    <task id="LOCAL-00006" summary="logo">
+      <created>1577453286292</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1577453286292</updated>
+    </task>
+    <task id="LOCAL-00007" summary="logo">
+      <created>1577453331151</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1577453331151</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26570000" />
+    <option name="totallyTimeSpent" value="26840000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -620,7 +638,9 @@
     <MESSAGE value="init project" />
     <MESSAGE value="zk client" />
     <MESSAGE value="zk registry, 注册标签" />
-    <option name="LAST_COMMIT_MESSAGE" value="zk registry, 注册标签" />
+    <MESSAGE value="readme" />
+    <MESSAGE value="logo" />
+    <option name="LAST_COMMIT_MESSAGE" value="logo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1063,8 +1083,7 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="148">
-            <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <first_editor>
             <folding>
               <element signature="e#243#244#0" expanded="true" />
               <element signature="e#313#314#0" expanded="true" />
