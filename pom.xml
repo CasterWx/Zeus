@@ -13,6 +13,7 @@
         <module>zeus-common</module>
         <module>zeus-demo</module>
         <module>zeus-client</module>
+        <module>zeus-server</module>
     </modules>
 
 
