@@ -1,8 +1,10 @@
 package com.antzuhl.zeus.config;
 
+import com.antzuhl.zeus.zkutils.Constant;
 import com.antzuhl.zeus.zkutils.ServiceRegistry;
 import lombok.Getter;
 import lombok.Setter;
+import org.I0Itec.zkclient.ZkClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationListener;
@@ -27,6 +29,7 @@ public class ZeusConfig  implements ApplicationListener<ContextRefreshedEvent> {
             String zkAddr = env.getProperty("zk.address");
             if (!StringUtils.isEmpty(zkAddr)){
                 ZeusConfig.setZkAddr(zkAddr);
+                ServiceRegistry.zkClient = new ZkClient(zkAddr, Constant.ZK_SESSION_TIMEOUT);
             }
         }
     }

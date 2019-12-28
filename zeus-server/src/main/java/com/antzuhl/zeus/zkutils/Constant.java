@@ -7,7 +7,7 @@ package com.antzuhl.zeus.zkutils;
  */
 public interface Constant {
 
-    int ZK_SESSION_TIMEOUT = 1000;
+    int ZK_SESSION_TIMEOUT = 15000;
 
     String NOT_FOUND_NODE = "not found node."; //查询空
 

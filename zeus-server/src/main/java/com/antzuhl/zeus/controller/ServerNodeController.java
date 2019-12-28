@@ -24,7 +24,7 @@ public class ServerNodeController {
     private ServiceRegistry serviceRegistry;
 
     /**
-     * Get namespace list
+     * Get namespace list .  Controller介从Cache中获取
      *
      * @param request  request
      * @param response response
