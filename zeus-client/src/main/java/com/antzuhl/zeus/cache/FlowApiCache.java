@@ -42,6 +42,12 @@ public class FlowApiCache {
      * 新增緩存
      * */
     public void addCache(FlowApiData key) {
+        if (cache.size()>50){
+            // CACHE转移持久化
+
+            // 持久化后清除所有缓存
+            cache.invalidateAll();
+        }
         cache.put(key.getClassPath(), key);
     }
 

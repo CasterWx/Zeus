@@ -10,6 +10,8 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Aspect
@@ -26,13 +28,18 @@ public class FlowMonitorAcpect {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         String classPath = joinPoint.getTarget().getClass().getName();
         FlowMonitor flowMonitor = signature.getMethod().getAnnotation(FlowMonitor.class);
+        List<Date> dates = new ArrayList<>();
+        FlowApiData flowApiData = null;
         if (flowMonitor != null) {
             Long call = 0L;
             if (flowApiCache.findFlowKey(classPath)) {
-                call = flowApiCache.findCache(classPath).getCall();
+                flowApiData = flowApiCache.findCache(classPath);
+                call = flowApiData.getCall();
+                dates = flowApiData.getDates();
             }
+            dates.add(new Date());
             call ++;
-            FlowApiData flowApiData = new FlowApiData(flowMonitor.name(),classPath,call);
+            flowApiData = new FlowApiData(flowMonitor.name(),classPath,dates,call);
             flowApiCache.addCache(flowApiData);
             flowApiCache.addFlowKey(classPath);
         }

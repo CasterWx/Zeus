@@ -69,3 +69,16 @@ public class ZeusDemoApplication {
   }
 ```
 
+
+#### 接口监控
+
+为你的方法或是API添加`@FlowMonitor(name)`注释，你的该方法访问将会得到记录。
+
+```java
+@RequestMapping(value = "/hello")
+@FlowMonitor(name = "hello")
+public String hello() {
+    return "Hello! " ;
+}
+```
+
