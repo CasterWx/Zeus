@@ -18,6 +18,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="zeus-all" target="1.5" />
+      <module name="zeus-wweb" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

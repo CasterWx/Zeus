@@ -1,10 +1,12 @@
 package com.antzuhl.zeus.zkutils;
 
-import com.alibaba.fastjson.JSON;
+import com.antzuhl.zeus.config.ZeusConfig;
 import com.antzuhl.zeus.node.ServerNode;
+import com.antzuhl.zeus.node.ZkNodeListener;
 import com.antzuhl.zeus.node.ZkNodeSerializer;
 import org.I0Itec.zkclient.ZkClient;
 import org.springframework.stereotype.Component;
+import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,25 +25,41 @@ public class ServiceRegistry {
         }
         zkClient = new ZkClient(zkAddr, Constant.ZK_SESSION_TIMEOUT);
         ServiceRegistry.zkClient.setZkSerializer(new ZkNodeSerializer());
+        ZkNodeListener.addNamespaceListener();
         return zkClient;
     }
 
-    public List<ServerNode> getAllServerNode(String zkAddr){
-        ZkClient zk = connectServer(zkAddr);
+    public ZResult<List<ServerNode>> getAllServerNode(String namespace){
+        ZkClient zk = connectServer(ZeusConfig.getZkAddr());
+        ZResult<List<ServerNode>> result = new ZResult<List<ServerNode>>(-1);
         List<ServerNode> zkServerList = new ArrayList<ServerNode>();
-        // 获得集群namespace名称
-        List<String> zkList = zk.getChildren(Constant.ZK_REGISTRY_PATH);
-        System.out.println(JSON.toJSONString(zkList));
-        // 根据集群名称获取子下服务节点
-        for (String zkName : zkList) {
-            List<String> serverNode = zk.getChildren(Constant.ZK_REGISTRY_PATH+"/"+zkName);
-            for (String sNode : serverNode) {
-                String data = zk.readData(Constant.ZK_REGISTRY_PATH + "/" +zkName +"/"+sNode);
-                zkServerList.add(new ServerNode(zkName,sNode,data));
-            }
+        List<String> zkList = null;
+        try {
+            zkList = zk.getChildren(Constant.ZK_REGISTRY_PATH + "/" + namespace);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        // 使用cache，如果node存在，就不去getData，不存在就getData
-        return zkServerList;
+        for (String sNode : zkList) {
+            String data = zk.readData(Constant.ZK_REGISTRY_PATH + "/" +namespace +"/"+sNode);
+            zkServerList.add(new ServerNode(namespace,sNode,data));
+        }
+        if (!CollectionUtils.isEmpty(zkServerList)){
+            result.setData(zkServerList);
+            result.setMessage("OK");
+            result.setCode(200);
+        }
+        return result;
     }
 
+    public ZResult<List<String>> getAllNamespace(){
+        ZResult<List<String>> result = new ZResult<List<String>>();
+        ZkClient zk = connectServer(ZeusConfig.getZkAddr());
+        // 获得集群namespace名称
+        List<String> zkList = zk.getChildren(Constant.ZK_REGISTRY_PATH);
+        if (!CollectionUtils.isEmpty(zkList)){
+            result.setCode(200);
+            result.setData(zkList);
+        }
+        return result;
+    }
 }

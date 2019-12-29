@@ -42,6 +42,10 @@ public class ZResult<T> implements Serializable {
         this.data = data;
     }
 
+    public ZResult(int code) {
+        this.code = code;
+    }
+
     public ZResult(int code, String message) {
         this.code = code;
         this.setMessage(message);

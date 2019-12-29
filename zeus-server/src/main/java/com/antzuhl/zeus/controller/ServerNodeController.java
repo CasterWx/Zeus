@@ -1,23 +1,17 @@
 package com.antzuhl.zeus.controller;
 
-
-import com.antzuhl.zeus.config.ZeusConfig;
 import com.antzuhl.zeus.node.ServerNode;
-import com.antzuhl.zeus.zkutils.Constant;
 import com.antzuhl.zeus.zkutils.ServiceRegistry;
 import com.antzuhl.zeus.zkutils.ZResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.websocket.server.PathParam;
 import java.util.List;
 
 @RestController
-@RequestMapping("/v1/zeus/namespaces")
+@RequestMapping("/v1/node")
 public class ServerNodeController {
 
     @Autowired
@@ -25,23 +19,27 @@ public class ServerNodeController {
 
     /**
      * Get namespace list .  Controller介从Cache中获取
-     *
-     * @param request  request
-     * @param response response
      * @return namespace list
      */
-    @GetMapping
-    public ZResult<List<ServerNode>> getNamespaces(HttpServletRequest request, HttpServletResponse response) {
-        ZResult<List<ServerNode>> rr = new ZResult<List<ServerNode>>();
-        rr.setCode(200);
-        List <ServerNode> serverNodes = serviceRegistry.getAllServerNode(ZeusConfig.getZkAddr());
-        if (!CollectionUtils.isEmpty(serverNodes)){
-            rr.setData(serverNodes);
-        } else {
-            rr.setCode(404);
-            rr.setMessage(Constant.NOT_FOUND_NODE);
+    @GetMapping(value = "/server")
+    public ZResult<List<ServerNode>> getServerNode(@PathParam(value = "namespace") String namespace) {
+        ZResult<List<ServerNode>> result = serviceRegistry.getAllServerNode(namespace);
+        if (result == null) {
+            result.setCode(-1);
+            result.setMessage("Namespace not found node.");
         }
+        if (CollectionUtils.isEmpty(result.getData())) {
+            result.setMessage("Node Empty.");
+        }
+        return result;
+    }
 
-        return rr;
+    @GetMapping(value = "/namespaces")
+    public ZResult<List<String>> getNamespaces() {
+        ZResult<List<String>> result = serviceRegistry.getAllNamespace();
+        if (result.getCode() == 200) {
+            result.setMessage("OK");
+        }
+        return result;
     }
 }

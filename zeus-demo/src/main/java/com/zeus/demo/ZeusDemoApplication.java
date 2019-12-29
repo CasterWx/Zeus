@@ -4,6 +4,16 @@ import com.antzuhl.zeus.server.ZeusRegistry;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * 2019-12-29 13:30:38.032
+ * 2019-12-29 13:30:44.278
+ *
+ * 2019-12-29 13:35:58.886
+ * 2019-12-29 13:36:02.159
+ *
+ * 2019-12-29 13:36:57.605
+ * 2019-12-29 13:37:03.752
+ * */
 @SpringBootApplication
 @ZeusRegistry(registryName = "user-center1", zkAddr = "192.168.124.16:2181",
         serverName = "server-2", serverAddr = "48.89.13.33:8081")
