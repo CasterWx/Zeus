@@ -12,6 +12,8 @@ Zeus可以用于服务发现，服务治理，负载均衡，服务容错，服�
 
 #### 服务注册
 
+![](https://img.shields.io/badge/%40-ZeusRegistry-red)
+
 引入zeus-client，在启动类添加`@ZeusRegistry`标签即可。
 
 * registryName ：命名空间(集群管理)
@@ -32,6 +34,8 @@ public class ZeusDemoApplication {
 
 #### 服务发现
 
+![](https://img.shields.io/badge/Get-%2Fv1%2Fnode%2Fnamespaces-red)
+
 * http://localhost:5454/v1/node/namespaces
 
 > requestMethod : `Get`
@@ -47,6 +51,8 @@ public class ZeusDemoApplication {
   ]
 }
 ```
+
+![](https://img.shields.io/badge/Get-server-red)
 
 * http://localhost:5454/v1/node/server?namespace=param
 
@@ -71,6 +77,8 @@ public class ZeusDemoApplication {
 
 
 #### 接口监控
+
+![](https://img.shields.io/badge/%40-FlowMonitor-red)
 
 为你的方法或是API添加`@FlowMonitor(name)`注释，你的该方法访问将会得到记录。
 
