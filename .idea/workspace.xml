@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d9a2ca9-ed9b-4dd7-a941-55f1cdd024ef" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/node/ZkNodeSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zeus-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/zeus-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/cache/ServerCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/cache/ServerCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zeus-client/src/main/java/com/antzuhl/zeus/registry/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/zeus-client/src/main/java/com/antzuhl/zeus/registry/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zeus-client/src/main/java/com/antzuhl/zeus/registry/ServiceRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/zeus-client/src/main/java/com/antzuhl/zeus/registry/ServiceRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zeus-demo/src/main/java/com/zeus/demo/ZeusDemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/zeus-demo/src/main/java/com/zeus/demo/ZeusDemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zeus-demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/zeus-demo/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/config/ZeusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/config/ZeusConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/controller/ServerNodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/controller/ServerNodeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/zkutils/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/zkutils/Constant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/zkutils/ServiceRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/zkutils/ServiceRegistry.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -42,11 +44,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/config/ZeusConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
+            <state relative-caret-position="185">
+              <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,8 +59,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/zkutils/ServiceRegistry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+            <state relative-caret-position="-178">
+              <caret line="30" column="66" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#879#891#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zeus-client/src/main/java/com/antzuhl/zeus/registry/ServiceRegistry.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,19 +82,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/github/sgroschupf/zkclient/0.1/zkclient-0.1.jar!/org/I0Itec/zkclient/ZkClient.class">
+        <entry file="file://$PROJECT_DIR$/zeus-client/src/main/java/com/antzuhl/zeus/ContextRefreshedListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-121">
-              <caret line="617" column="20" selection-start-line="617" selection-start-column="20" selection-end-line="617" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/controller/ServerNodeController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+            <state relative-caret-position="159">
+              <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,37 +96,52 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.0.RELEASE/spring-web-5.2.0.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="108" selection-start-line="108" selection-end-line="108" />
+            <state relative-caret-position="41">
+              <caret line="106" selection-start-line="106" selection-end-line="106" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zeus-server/server.iml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/zkutils/ZResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-897">
+              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/cache/ServerCache.java">
+        <entry file="file://$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/node/ZkNodeSerializer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+            <state relative-caret-position="148">
+              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#689#690#0" expanded="true" />
-                <element signature="e#724#725#0" expanded="true" />
-                <element signature="e#1172#1180#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zeus-server/pom.xml">
+        <entry file="file://$PROJECT_DIR$/zeus-demo/src/main/java/com/zeus/demo/ZeusDemoApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+            <state relative-caret-position="146">
+              <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#434#435#0" expanded="true" />
+                <element signature="e#504#505#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/zeus-demo/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="16" selection-start-column="16" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -128,22 +149,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/Zeus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="242">
+              <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#447#448#0" expanded="true" />
                 <element signature="e#502#503#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/zkutils/Constant.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -206,10 +218,7 @@
         <option value="$PROJECT_DIR$/zeus-client/src/main/java/com/antzuhl/zeus/aop/RegistryAcpect.java" />
         <option value="$PROJECT_DIR$/zeus-client/src/main/java/com/antzuhl/zeus/registry/ZkApplication.java" />
         <option value="$PROJECT_DIR$/zeus-client/src/main/java/com/antzuhl/zeus/util/AnnotationUtil.java" />
-        <option value="$PROJECT_DIR$/zeus-demo/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/zeus-client/src/main/java/com/antzuhl/zeus/registry/Constant.java" />
         <option value="$PROJECT_DIR$/zeus-client/src/main/java/com/antzuhl/zeus/server/ZeusRegistry.java" />
-        <option value="$PROJECT_DIR$/zeus-client/src/main/java/com/antzuhl/zeus/registry/ServiceRegistry.java" />
         <option value="$PROJECT_DIR$/zeus-demo/src/main/java/com/zeus/demo/svc/HelloService.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/Zeus.java" />
@@ -217,14 +226,18 @@
         <option value="$PROJECT_DIR$/zeus-client/src/main/java/com/antzuhl/zeus/ContextRefreshedListener.java" />
         <option value="$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/zkutils/RestResult.java" />
         <option value="$PROJECT_DIR$/zeus-server/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/zeus-demo/src/main/java/com/zeus/demo/ZeusDemoApplication.java" />
         <option value="$PROJECT_DIR$/zeus-server/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/zeus-server/pom.xml" />
         <option value="$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/cache/ServerCache.java" />
         <option value="$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/zkutils/Constant.java" />
         <option value="$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/controller/ServerNodeController.java" />
-        <option value="$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/zkutils/ServiceRegistry.java" />
+        <option value="$PROJECT_DIR$/zeus-client/src/main/java/com/antzuhl/zeus/registry/Constant.java" />
+        <option value="$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/node/ZkSerializer.java" />
         <option value="$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/config/ZeusConfig.java" />
+        <option value="$PROJECT_DIR$/zeus-client/src/main/java/com/antzuhl/zeus/registry/ServiceRegistry.java" />
+        <option value="$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/zkutils/ServiceRegistry.java" />
+        <option value="$PROJECT_DIR$/zeus-demo/src/main/java/com/zeus/demo/ZeusDemoApplication.java" />
+        <option value="$PROJECT_DIR$/zeus-demo/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -244,11 +257,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
-    <option name="width" value="1938" />
-    <option name="height" value="1058" />
+    <option name="width" value="1939" />
+    <option name="height" value="1059" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -256,13 +269,55 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="zeus" type="b2602c69:ProjectViewProjectNode" />
               <item name="zeus-all" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zeus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zeus-all" type="462c0819:PsiDirectoryNode" />
+              <item name="zeus-demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zeus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zeus-all" type="462c0819:PsiDirectoryNode" />
+              <item name="zeus-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zeus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zeus-all" type="462c0819:PsiDirectoryNode" />
+              <item name="zeus-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zeus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zeus-all" type="462c0819:PsiDirectoryNode" />
+              <item name="zeus-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zeus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zeus-all" type="462c0819:PsiDirectoryNode" />
+              <item name="zeus-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zeus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zeus-all" type="462c0819:PsiDirectoryNode" />
+              <item name="zeus-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zeus" type="b2602c69:ProjectViewProjectNode" />
@@ -337,6 +392,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="zeus" type="462c0819:PsiDirectoryNode" />
+              <item name="node" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zeus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zeus-all" type="462c0819:PsiDirectoryNode" />
+              <item name="zeus-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zeus" type="462c0819:PsiDirectoryNode" />
               <item name="zkutils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -352,6 +417,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="CatdeaLogs" />
     </panes>
   </component>
@@ -409,7 +475,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Zeus">
+  <component name="RunManager" selected="Spring Boot.ZeusDemoApplication (1)">
     <configuration name="ServiceRegistry" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -457,7 +523,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ZeusDemoApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="ZeusDemoApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false" temporary="true" nameIsGenerated="true">
       <module name="zeus-demo" />
       <extension name="coverage">
         <pattern>
@@ -466,6 +532,7 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.zeus.demo.ZeusDemoApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -496,10 +563,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.ServiceRegistry" />
+      <item itemvalue="Spring Boot.Zeus" />
+      <item itemvalue="Spring Boot.ZeusDemoApplication" />
+      <item itemvalue="Spring Boot.ZeusDemoApplication (1)" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.Zeus" />
         <item itemvalue="Spring Boot.ZeusDemoApplication (1)" />
+        <item itemvalue="Spring Boot.Zeus" />
         <item itemvalue="Application.ServiceRegistry" />
         <item itemvalue="Spring Boot.ZeusDemoApplication" />
         <item itemvalue="Spring Boot.ZeusDemoApplication" />
@@ -521,7 +594,8 @@
       <workItem from="1577375464782" duration="1585000" />
       <workItem from="1577414339762" duration="6945000" />
       <workItem from="1577445982551" duration="8588000" />
-      <workItem from="1577493584350" duration="13571000" />
+      <workItem from="1577493584350" duration="14252000" />
+      <workItem from="1577591018139" duration="2536000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <created>1577343490453</created>
@@ -586,17 +660,24 @@
       <option name="project" value="LOCAL" />
       <updated>1577545356733</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="use ZKClient">
+      <created>1577549627675</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1577549627675</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41641000" />
+    <option name="totallyTimeSpent" value="44858000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1551" height="847" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2419571" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24179505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -606,8 +687,8 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994012" weight="0.36911765" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.35588235" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994012" visible="true" weight="0.48185778" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3918723" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -644,7 +725,8 @@
     <MESSAGE value="logo" />
     <MESSAGE value="del readme title" />
     <MESSAGE value="registry server" />
-    <option name="LAST_COMMIT_MESSAGE" value="registry server" />
+    <MESSAGE value="use ZKClient" />
+    <option name="LAST_COMMIT_MESSAGE" value="use ZKClient" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -680,16 +762,16 @@
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/zeus-client/src/main/java/com/antzuhl/zeus/registry/ServiceRegistry.java</url>
-          <line>94</line>
+          <url>file://$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/zkutils/ServiceRegistry.java</url>
+          <line>38</line>
           <properties />
-          <option name="timeStamp" value="50" />
+          <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/zkutils/ServiceRegistry.java</url>
-          <line>28</line>
+          <line>39</line>
           <properties />
-          <option name="timeStamp" value="61" />
+          <option name="timeStamp" value="63" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -750,6 +832,31 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>zk.readData(Constant.ZK_REGISTRY_PATH + &quot;/&quot; +zkName +&quot;/&quot;+sNode);</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Constant.ZK_REGISTRY_PATH + &quot;/&quot; +zkName +&quot;/&quot;+sNode</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>zk.getChildren(Constant.ZK_REGISTRY_PATH+&quot;*&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>zk.getChildren(Constant.ZK_REGISTRY_PATH+&quot;/user-center1&quot;);</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>zkList</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>zk.readData(Constant.ZK_REGISTRY_PATH);</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -769,35 +876,9 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>Constant.ZK_REGISTRY_PATH+&quot;/&quot;+zkList.get(0)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>zk.readData(Constant.ZK_REGISTRY_PATH+&quot;/&quot;+zkList.get(0))</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>zk.readData(Constant.ZK_REGISTRY_PATH+zkList.get(0))</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>zk.readData(zkList.get(0))</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>zooKeeper.getChildren(&quot;/&quot;,false);</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/aop/RegistryAcpect.java" />
     <entry file="file://$PROJECT_DIR$/zeus-client/src/main/java/ZeusRegistry.java" />
     <entry file="file://$PROJECT_DIR$/zeus-client/src/main/java/ServiceRegistry.java" />
     <entry file="file://$PROJECT_DIR$/zeus-client/src/main/java/Constant.java" />
@@ -883,13 +964,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zeus-client/src/main/java/com/antzuhl/zeus/registry/Constant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zeus-demo/src/main/java/com/zeus/demo/svc/HelloService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
@@ -897,13 +971,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zeus-demo/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -921,16 +988,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="518">
           <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zeus-client/src/main/java/com/antzuhl/zeus/registry/ServiceRegistry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="78" column="60" selection-start-line="78" selection-start-column="60" selection-end-line="78" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -969,23 +1026,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zeus-client/src/main/java/com/antzuhl/zeus/ContextRefreshedListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/node/ServerNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.2.0.RELEASE/spring-context-5.2.0.RELEASE.jar!/org/springframework/context/event/SimpleApplicationEventMulticaster.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
@@ -1000,16 +1040,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zeus-demo/src/main/java/com/zeus/demo/ZeusDemoApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.2.0.RELEASE/spring-core-5.2.0.RELEASE.jar!/org/springframework/core/env/PropertyResolver.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
@@ -1021,13 +1051,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1170">
           <caret line="131" column="11" selection-start-line="131" selection-start-column="11" selection-end-line="131" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/zkutils/ZResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-259">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1057,42 +1080,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zeus-server/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
+        <state relative-caret-position="1961">
           <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.0.RELEASE/spring-web-5.2.0.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/zkutils/Constant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="370">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/cache/ServerCache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#689#690#0" expanded="true" />
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#1172#1180#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="296">
+          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zeus-client/src/main/java/com/antzuhl/zeus/registry/Constant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/controller/ServerNodeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+        <state relative-caret-position="252">
+          <caret line="40" column="28" lean-forward="true" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1101,27 +1118,32 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/github/sgroschupf/zkclient/0.1/zkclient-0.1.jar!/org/I0Itec/zkclient/ZkClient.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-121">
-          <caret line="617" column="20" selection-start-line="617" selection-start-column="20" selection-end-line="617" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/Zeus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="133">
+          <caret line="596" selection-start-line="596" selection-end-line="596" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#447#448#0" expanded="true" />
-            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#21635#21636#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/zkutils/ServiceRegistry.java">
+    <entry file="file://$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/node/ServerNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        <state relative-caret-position="244">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/zkutils/ZResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-897">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/node/ZkNodeSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1130,11 +1152,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/config/ZeusConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
+        <state relative-caret-position="185">
+          <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zeus-client/src/main/java/com/antzuhl/zeus/registry/ServiceRegistry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zeus-client/src/main/java/com/antzuhl/zeus/ContextRefreshedListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/Zeus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#447#448#0" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.0.RELEASE/spring-web-5.2.0.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/zkutils/ServiceRegistry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-178">
+          <caret line="30" column="66" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#879#891#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zeus-demo/src/main/java/com/zeus/demo/ZeusDemoApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zeus-demo/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
         </state>
       </provider>
     </entry>

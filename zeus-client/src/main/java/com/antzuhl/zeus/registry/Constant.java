@@ -9,6 +9,7 @@ public interface Constant {
 
     int ZK_SESSION_TIMEOUT = 5000;
 
+    String ZK_NODE_DATA = "NODE";
     String ZK_REGISTRY_PATH = "/registry";
 
     // add NameSpace

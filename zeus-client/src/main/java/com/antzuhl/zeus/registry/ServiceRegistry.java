@@ -20,6 +20,8 @@ public class ServiceRegistry  {
 
     private CountDownLatch latch = new CountDownLatch(1);
 
+    private byte[] bytes = Constant.ZK_NODE_DATA.getBytes();
+
     public ServiceRegistry() {
     }
     /*
@@ -63,7 +65,7 @@ public class ServiceRegistry  {
         try {
             Stat s = zk.exists(Constant.ZK_REGISTRY_PATH, false);
             if (s == null) {
-                zk.create(Constant.ZK_REGISTRY_PATH, new byte[0], ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+                zk.create(Constant.ZK_REGISTRY_PATH, bytes, ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
             }
         } catch (KeeperException e) {
             logger.error("KeeperException error:", e);
@@ -76,7 +78,7 @@ public class ServiceRegistry  {
         try {
             Stat s = zk.exists(Constant.ZK_REGISTRY_PATH + "/" +namespace, false);
             if (s == null) {
-                zk.create(Constant.ZK_REGISTRY_PATH + "/" + namespace, new byte[0], ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+                zk.create(Constant.ZK_REGISTRY_PATH + "/" + namespace, bytes, ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
             }
         } catch (KeeperException e) {
             logger.error("KeeperException error:", e);
