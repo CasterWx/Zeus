@@ -29,3 +29,33 @@ public class ZeusDemoApplication {
     }
 }
 ```
+
+#### 服务发现
+
+* http://localhost:5454/v1/node/namespaces
+
+> requestMethod : `Get`
+
+获取所有集群名。
+
+* http://localhost:5454/v1/node/server?namespace=param
+
+> requestMethod : `Get`
+
+获取指定集群下的所有服务节点信息。
+
+> response
+
+```json
+{
+  "code":200,
+  "message":"OK",
+  "data":[{
+    "nameSpace":"user-center1",
+    "serverName":"server-1",
+    "data":"126",
+    "path":"/registry/user-center1/server-1"
+    }]
+  }
+```
+
