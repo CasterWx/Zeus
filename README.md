@@ -38,6 +38,16 @@ public class ZeusDemoApplication {
 
 获取所有集群名。
 
+```json
+{
+  "code":200,
+  "message":"OK",
+  "data":[
+    "user-center2","user-center1","user-center3"
+  ]
+}
+```
+
 * http://localhost:5454/v1/node/server?namespace=param
 
 > requestMethod : `Get`
