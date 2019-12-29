@@ -12,7 +12,7 @@ import java.util.Map;
 
 @Component
 public class ContextRefreshedListener implements ApplicationListener<ContextRefreshedEvent> {
-    public static Map<String, Object> beanMap = new HashMap<String, Object>();
+    private static Map<String, Object> beanMap = new HashMap<String, Object>();
 
     @Autowired
     ServiceRegistry serviceRegistry;
@@ -38,7 +38,5 @@ public class ContextRefreshedListener implements ApplicationListener<ContextRefr
             * */
             serviceRegistry.register(registryName, zkAddr, serverName, serverAddr);
         }
-
-
     }
 }
