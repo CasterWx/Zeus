@@ -1,7 +1,6 @@
-package com.antzuhl.zeus.controller.impl;
+package com.antzuhl.zeusdemo2.service.impl;
 
 import com.antzuhl.zeus.annotation.RpcService;
-import com.antzuhl.zeus.controller.DoSomething;
 
 @RpcService
 public class DoSomethingImpl implements DoSomething {

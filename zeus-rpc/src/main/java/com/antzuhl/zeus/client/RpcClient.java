@@ -25,7 +25,7 @@ import java.util.concurrent.SynchronousQueue;
  * Created by MACHENIKE on 2018-12-03.
  */
 @Component
-public class NettyClient {
+public class RpcClient {
 
     public static ChannelGroup channels = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
 
@@ -35,7 +35,7 @@ public class NettyClient {
 
     private Bootstrap bootstrap = new Bootstrap();
 
-    public NettyClient() {
+    public RpcClient() {
         bootstrap.group(group).
                 channel(NioSocketChannel.class).
                 option(ChannelOption.TCP_NODELAY, true).
@@ -50,7 +50,7 @@ public class NettyClient {
                         pipeline.addLast("handler",new NettyClientHandler());
                     }
                 });
-//        Object o  = send(new RpcRequest("1", "com.antzuhl.zeus.controller.DoSomething", "doHello", null, null));
+//        Object o  = send(new RpcRequest("1", "com.antzuhl.zeusdemo2.service.impl.DoSomething", "doHello", null, null));
     }
 
     public void doConnect(String addr, Integer port) throws InterruptedException {

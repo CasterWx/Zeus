@@ -77,7 +77,7 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
             Method method = serviceClass.getMethod(methodName, parameterTypes);
             method.setAccessible(true);
             return method.invoke(serviceBean, getParameters(parameterTypes,parameters));
-        }else{
+        } else {
             throw new Exception("未找到服务接口,请检查配置!:"+className+"#"+request.getMethodName());
         }
     }

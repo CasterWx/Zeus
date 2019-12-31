@@ -33,7 +33,7 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
         InetSocketAddress address =(InetSocketAddress) ctx.channel().remoteAddress();
         logger.info("与RPC服务器断开连接."+address);
         ctx.channel().close();
-        NettyClient.channels.remove(ctx.channel());
+        RpcClient.channels.remove(ctx.channel());
     }
 
     public void channelRead(ChannelHandlerContext ctx, Object msg)throws Exception {

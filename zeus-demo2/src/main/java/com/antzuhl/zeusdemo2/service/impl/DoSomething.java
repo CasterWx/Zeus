@@ -1,4 +1,4 @@
-package com.antzuhl.zeus.controller;
+package com.antzuhl.zeusdemo2.service.impl;
 
 public interface DoSomething {
     void doHello();
