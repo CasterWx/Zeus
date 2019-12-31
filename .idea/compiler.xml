@@ -7,10 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="zeus-rpc" />
-        <module name="rpc" />
-        <module name="common" />
-        <module name="zeus-common" />
+        <module name="zeus-server" />
         <module name="zeus-client" />
+        <module name="rpc" />
+        <module name="zeus-common" />
         <module name="server" />
         <module name="zeus-demo" />
         <module name="client" />
@@ -18,7 +18,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="zeus-all" target="1.5" />
-      <module name="zeus-wweb" target="1.5" />
+      <module name="zeus-common" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

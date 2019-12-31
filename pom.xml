@@ -10,10 +10,10 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>zeus-rpc</module>
-        <module>zeus-common</module>
         <module>zeus-demo</module>
         <module>zeus-client</module>
         <module>zeus-server</module>
+        <module>zeus-common</module>
     </modules>
 
 

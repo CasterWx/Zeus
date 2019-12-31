@@ -88,7 +88,7 @@ export default {
   },
   watch: {
     $route: {
-      handler: function(route) {
+      com.antzuhl.zeus.handler: function(route) {
         this.redirect = route.query && route.query.redirect
       },
       immediate: true
