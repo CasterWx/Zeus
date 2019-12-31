@@ -79,7 +79,6 @@ public class ZeusDemoApplication {
   }
 ```
 
-
 #### 接口监控
 
 ![](https://img.shields.io/badge/%40-FlowMonitor-red)
@@ -93,4 +92,56 @@ public String hello() {
     return "Hello! " ;
 }
 ```
+
+#### Rpc远程调用
+
+![](https://img.shields.io/badge/%40-RpcService-red)  ![](https://img.shields.io/badge/RpcClient-addr,port-red) 
+
+存在一个server-1，地址为`localhost:8080`，还存在一个server-2，地址为`localhost:8090`。
+
+server-1中有一个方法，假如它的作用是查询数据库返回用户信息，我们就可以给这个service类加上`@RpcService`方法来启动远程调用。
+
+```java
+@RpcService
+public class DoSomethingImpl implements DoSomething {
+
+    private static List<String> users = new ArrayList<>();
+
+    @Override
+    public List<String> doHello() {
+        users.add("user-1");
+        users.add("user-2");
+        users.add("user-3");
+        return users;
+    }
+}
+```
+
+在server-2中如果我们想要调用server-1的doHello方法获取用户信息，就可以创建一个简单的RpcClient来调用。
+
+```java
+
+@RestController
+public class HelloService {
+
+    @RequestMapping(value = "/hello")
+    public String hello() throws InterruptedException {
+        RpcClient rpcClient = new RpcClient();
+        rpcClient.doConnect("localhost", 18868); // port默认均为18868
+        Object object = rpcClient.send(new RpcRequest("1", "com.antzuhl.zeusdemo2.service.impl.DoSomethingImpl", "doHello", null, null));
+
+        return object.toString();
+    }
+}
+```
+
+此时访问这个`/hello`接口，可以得到返回的json结果。
+
+```json
+{"code":0,"data":["user-1","user-2","user-3"],"requestId":"1"}
+```
+
+![](https://raw.githubusercontent.com/CasterWx/gitpics/master/img/20191231201750.png)
+
+RpcRequest中参数为消息ID，实例类，方法，参数类型列表，参数值列表。
 

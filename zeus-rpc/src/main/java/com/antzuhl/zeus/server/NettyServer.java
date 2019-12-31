@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Component
-public class NettyServer  implements ApplicationContextAware, InitializingBean {
+public class NettyServer implements ApplicationContextAware, InitializingBean {
 
     private static final Logger logger = LoggerFactory.getLogger(NettyServer.class);
     private static final EventLoopGroup bossGroup = new NioEventLoopGroup(1);
@@ -36,6 +36,7 @@ public class NettyServer  implements ApplicationContextAware, InitializingBean {
         Map<String, Object> beans = applicationContext.getBeansWithAnnotation(RpcService.class);
         for(Object serviceBean : beans.values()){
             Class<?> clazz = serviceBean.getClass();
+            serviceMap.put(clazz.getName(), serviceBean);
             Class<?>[] interfaces = clazz.getInterfaces();
             for (Class<?> inter : interfaces){
                 String interfaceName = inter.getName();

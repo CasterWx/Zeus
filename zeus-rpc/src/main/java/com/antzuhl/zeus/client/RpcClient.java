@@ -59,6 +59,13 @@ public class RpcClient {
         channels.add(channel);
     }
 
+    public void doConnect(String addr) throws InterruptedException {
+        ChannelFuture future = bootstrap.connect(addr,18868);
+        Channel channel = future.sync().channel();
+        channels.add(channel);
+    }
+
+
     @PreDestroy
     public void destroy(){
         logger.info("RPC客户端退出,释放资源!");

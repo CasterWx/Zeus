@@ -1,5 +1,7 @@
 package com.antzuhl.zeusdemo2.service.impl;
 
+import java.util.List;
+
 public interface DoSomething {
-    void doHello();
+    List<String> doHello();
 }
