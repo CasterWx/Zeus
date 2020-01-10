@@ -41,13 +41,7 @@
         </dependency>
         <dependency>
             <groupId>com.zeus</groupId>
-            <artifactId>zeus-client</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.zeus</groupId>
-            <artifactId>zeus-rpc</artifactId>
+            <artifactId>zeus-common</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

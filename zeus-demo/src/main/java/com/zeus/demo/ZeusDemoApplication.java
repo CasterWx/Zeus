@@ -1,6 +1,5 @@
 package com.zeus.demo;
 
-import com.antzuhl.zeus.server.ZeusRegistry;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

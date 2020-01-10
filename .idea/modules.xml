@@ -4,8 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/zeus-demo/demo.iml" filepath="$PROJECT_DIR$/zeus-demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/zeus-all.iml" filepath="$PROJECT_DIR$/zeus-all.iml" />
-      <module fileurl="file://$PROJECT_DIR$/zeus-common/zeus-common.iml" filepath="$PROJECT_DIR$/zeus-common/zeus-common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/zeus-web.iml" filepath="$PROJECT_DIR$/zeus-web.iml" />
     </modules>
   </component>
 </project>

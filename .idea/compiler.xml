@@ -6,12 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="zeus-rpc" />
-        <module name="zeus-server" />
-        <module name="zeus-client" />
         <module name="zeus-demo2" />
+        <module name="zeus-server" />
         <module name="rpc" />
+        <module name="zeus-rpc" />
         <module name="zeus-common" />
+        <module name="zeus-client" />
+        <module name="zeus-forward-route" />
         <module name="server" />
         <module name="zeus-demo" />
         <module name="client" />
@@ -19,7 +20,6 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="zeus-all" target="1.5" />
-      <module name="zeus-common" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

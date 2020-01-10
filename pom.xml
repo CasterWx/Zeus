@@ -14,6 +14,7 @@
         <module>zeus-client</module>
         <module>zeus-server</module>
         <module>zeus-common</module>
+        <module>zeus-forward-route</module>
     </modules>
 
 

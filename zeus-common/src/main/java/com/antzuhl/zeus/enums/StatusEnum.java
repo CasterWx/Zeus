@@ -1,0 +1,119 @@
+package com.antzuhl.zeus.enums;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public enum StatusEnum {
+
+    /** 成功 */
+    SUCCESS(9000, "成功"),
+    /** 成功 */
+    FALLBACK(8000, "FALL_BACK"),
+    /** 参数校验失败**/
+    VALIDATION_FAIL(3000, "参数校验失败"),
+    /** 失败 */
+    FAIL(4000, "失败"),
+    /** 远程RPC */
+    REMOTE_INVOKE(5000, "远程方法调用"),
+    /** 服务注册消息 */
+    REMOTE_SERVER_REGISTRY_MSG(4100, "服务注册消息"),
+    /** 服务获取消息 */
+    REMOTE_SERVER_GET_MSG(4200, "服务获取消息"),
+    /** 配置请求消息 */
+    REMOTE_PROPER_MSG(5100, "请求配置信息"),
+    /** 配置注册消息 */
+    REMOTE_REGISTRY_MSG(5200, "配置注册消息"),
+    /** 请求限流 */
+    REQUEST_LIMIT(6000, "请求限流"),
+    ;
+
+
+    /** 枚举值码 */
+    private final int code;
+
+    /** 枚举描述 */
+    private final String message;
+
+    /**
+     * 构建一个 StatusEnum 。
+     * @param code 枚举值码。
+     * @param message 枚举描述。
+     */
+    private StatusEnum(int code, String message) {
+        this.code = code;
+        this.message = message;
+    }
+
+    /**
+     * 得到枚举值码。
+     * @return 枚举值码。
+     */
+    public int getCode() {
+        return code;
+    }
+
+    /**
+     * 得到枚举描述。
+     * @return 枚举描述。
+     */
+    public String getMessage() {
+        return message;
+    }
+
+    /**
+     * 得到枚举值码。
+     * @return 枚举值码。
+     */
+    public int code() {
+        return code;
+    }
+
+    /**
+     * 得到枚举描述。
+     * @return 枚举描述。
+     */
+    public String message() {
+        return message;
+    }
+
+    /**
+     * 通过枚举值码查找枚举值。
+     * @param code 查找枚举值的枚举值码。
+     * @return 枚举值码对应的枚举值。
+     * @throws IllegalArgumentException 如果 code 没有对应的 StatusEnum 。
+     */
+    public static StatusEnum findStatus(int code) {
+        for (StatusEnum status : values()) {
+            if (status.getCode() == code) {
+                return status;
+            }
+        }
+        throw new IllegalArgumentException("ResultInfo StatusEnum not legal:" + code);
+    }
+
+    /**
+     * 获取全部枚举值。
+     *
+     * @return 全部枚举值。
+     */
+    public static List<StatusEnum> getAllStatus() {
+        List<StatusEnum> list = new ArrayList<StatusEnum>();
+        for (StatusEnum status : values()) {
+            list.add(status);
+        }
+        return list;
+    }
+
+    /**
+     * 获取全部枚举值码。
+     *
+     * @return 全部枚举值码。
+     */
+    public static List<Integer> getAllStatusCode() {
+        List<Integer> list = new ArrayList<>();
+        for (StatusEnum status : values()) {
+            list.add(status.code());
+        }
+        return list;
+    }
+}

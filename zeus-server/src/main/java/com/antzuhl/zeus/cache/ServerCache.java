@@ -22,7 +22,7 @@ public class ServerCache {
     }
 
     /*
-    * 查詢緩存
+     * 查詢緩存
     * */
     public ServerNode findCache(String key) {
         ServerNode serverNode = null;

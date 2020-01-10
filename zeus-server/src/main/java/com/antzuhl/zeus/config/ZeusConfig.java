@@ -30,6 +30,14 @@ public class ZeusConfig  implements ApplicationListener<ContextRefreshedEvent> {
     @Setter
     private static String zkAddr;
 
+    public static String getZkAddr() {
+        return zkAddr;
+    }
+
+    public static void setZkAddr(String zkAddr) {
+        ZeusConfig.zkAddr = zkAddr;
+    }
+
     @Autowired
     private Environment env;
 
