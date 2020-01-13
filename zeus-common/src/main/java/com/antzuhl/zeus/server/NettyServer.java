@@ -1,7 +1,7 @@
 package com.antzuhl.zeus.server;
 
 import com.antzuhl.zeus.annotation.RpcService;
-import com.antzuhl.zeus.server.handler.NettyServerHandler;
+import com.antzuhl.zeus.handler.NettyServerHandler;
 import com.antzuhl.zeus.utils.JSONDecoder;
 import com.antzuhl.zeus.utils.JSONEncoder;
 import io.netty.bootstrap.ServerBootstrap;

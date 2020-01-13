@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/zeus-demo2/pom.xml" />
         <option value="$PROJECT_DIR$/zeus-client/pom.xml" />
         <option value="$PROJECT_DIR$/zeus-common/pom.xml" />
+        <option value="$PROJECT_DIR$/zeus-forward-route/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

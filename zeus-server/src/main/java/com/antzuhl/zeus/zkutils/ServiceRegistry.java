@@ -41,7 +41,7 @@ public class ServiceRegistry {
         }
         for (String sNode : zkList) {
             String data = zk.readData(Constant.ZK_REGISTRY_PATH + "/" +namespace +"/"+sNode);
-            zkServerList.add(new ServerNode(namespace,sNode,data));
+            zkServerList.add(new ServerNode(namespace, sNode, data));
         }
         if (!CollectionUtils.isEmpty(zkServerList)){
             result.setData(zkServerList);

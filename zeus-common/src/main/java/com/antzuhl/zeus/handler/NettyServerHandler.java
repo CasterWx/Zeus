@@ -10,6 +10,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.timeout.IdleState;
 import io.netty.handler.timeout.IdleStateEvent;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,7 @@ import java.lang.reflect.Method;
 import java.util.Map;
 
 @ChannelHandler.Sharable
+@Slf4j
 public class NettyServerHandler extends ChannelInboundHandlerAdapter {
 
     @Autowired
@@ -97,8 +99,8 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
     }
 
     /**
+     * 配置注册
      * @param request
-     *
      * */
     public String registoryHandler(RpcRequest request) {
         String registoryName = request.getClassName();

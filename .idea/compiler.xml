@@ -2,20 +2,21 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="zeus-demo2" />
         <module name="zeus-server" />
-        <module name="rpc" />
+        <module name="zeus-client" />
         <module name="zeus-rpc" />
         <module name="zeus-common" />
-        <module name="zeus-client" />
         <module name="zeus-forward-route" />
         <module name="server" />
-        <module name="zeus-demo" />
+        <module name="rpc" />
         <module name="client" />
+        <module name="zeus-demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
