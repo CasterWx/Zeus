@@ -30,12 +30,11 @@ public class ContextRefreshedListener implements ApplicationListener<ContextRefr
 
         if (zeusRegistry != null) {
             String registryName = zeusRegistry.registryName();
-            String zkAddr = zeusRegistry.zkAddr();
             String serverName = zeusRegistry.serverName();
             String serverAddr = zeusRegistry.serverAddr();
 
             logger.info("ZeusRegistry[Annotation] Address ==> registryName:{}, zkAddr:{}, serverName:{}, serverAddr:{}",
-                    registryName, zkAddr, serverName, serverAddr);
+                    registryName, serverName, serverAddr);
             /*
             * namespace , data[ipAddress]
             * */

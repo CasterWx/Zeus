@@ -10,6 +10,7 @@
         <module name="zeus-demo2" />
         <module name="zeus-server" />
         <module name="zeus-client" />
+        <module name="zeus-registory" />
         <module name="zeus-rpc" />
         <module name="zeus-common" />
         <module name="zeus-forward-route" />

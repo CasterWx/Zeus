@@ -12,7 +12,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @Slf4j
 public class CommonApplication implements ApplicationRunner {
 
-	private static final Logger logger = LoggerFactory.getLogger(CommonApplication.class);
 
 	public static void main(String[] args) {
 		SpringApplication.run(CommonApplication.class, args);
@@ -20,7 +19,6 @@ public class CommonApplication implements ApplicationRunner {
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-
 	}
 }
 

@@ -8,14 +8,12 @@ import org.springframework.stereotype.Component;
 import java.lang.annotation.*;
 
 @Inherited
-//@ComponentScan("com.antzuhl.zeus")
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Import({ContextRefreshedListener.class})
 @Component
 public @interface ZeusRegistry {
     String registryName() default "";
-    String zkAddr() default "";
     String serverAddr() default "";
     String serverName() default "";
 }
