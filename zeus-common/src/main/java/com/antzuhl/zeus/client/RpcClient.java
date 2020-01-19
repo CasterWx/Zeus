@@ -76,6 +76,7 @@ public class RpcClient {
 
     @PreDestroy
     public void destroy(){
+        log.info("RPC客户端退出,释放资源!");
         group.shutdownGracefully();
     }
 
