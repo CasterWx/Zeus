@@ -2,22 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d9a2ca9-ed9b-4dd7-a941-55f1cdd024ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/zeus-registory/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zeus-registory/src/main/java/com/antzuhl/zeus/RegistoryApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zeus-registory/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zeus-registory/src/main/resources/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zeus-registory/src/main/resources/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/annotation/ZeusProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/dao/BaseManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/dao/NamespaceManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/dao/ServiceManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/dao/utils/Constant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/dao/utils/JdbcHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/dao/utils/ZeusBaseDal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/entity/beans/Namespace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/entity/beans/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zeus-common/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zeus-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/zeus-common/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/CommonApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/CommonApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/ContextRefreshedListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/ContextRefreshedListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/annotation/ZeusRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/annotation/ZeusRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/client/RpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/client/RpcClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/handler/NettyClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/handler/NettyClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/handler/NettyServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/handler/NettyServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/server/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/server/NettyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/node/ServerNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/zeus-server/src/main/java/com/antzuhl/zeus/node/ServerNode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="174" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -76,7 +88,7 @@
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/zeus-common/src/main/java/com" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/zeus-registory/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../geektime-spring-family/Chapter 2/simple-jdbc-demo" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -93,19 +105,8 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Zeus\zeus-rpc\src\main\java\com\antzuhl\zeus" />
-      <recent name="H:\zeus-all\zeus-server\src\main\resources\templates" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.antzuhl.zeus" />
-      <recent name="com.antzuhl.zeus.cache" />
-      <recent name="com.antzuhl.zeus.aop" />
-      <recent name="com.antzuhl.zeus.handler" />
-      <recent name="com.antzuhl.zeus.exception" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Zeus\zeus-registory\src\main\java" />
@@ -114,8 +115,19 @@
       <recent name="E:\Zeus\zeus-common\src\main\java\com\antzuhl\zeus" />
       <recent name="E:\Zeus\zeus-common\src\main\java\com\antzuhl\zeus\annotation" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.antzuhl.zeus.dao" />
+      <recent name="com.antzuhl.zeus" />
+      <recent name="com.antzuhl.zeus.cache" />
+      <recent name="com.antzuhl.zeus.aop" />
+      <recent name="com.antzuhl.zeus.handler" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Zeus\zeus-rpc\src\main\java\com\antzuhl\zeus" />
+      <recent name="H:\zeus-all\zeus-server\src\main\resources\templates" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.RegistoryApplication">
+  <component name="RunManager" selected="Spring Boot.CommonApplication">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="zeus-all" />
       <working_directory value="$PROJECT_DIR$" />
@@ -218,9 +230,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.CommonApplication" />
         <item itemvalue="Spring Boot.RegistoryApplication" />
         <item itemvalue="Spring Boot.ZeusDemoApplication" />
-        <item itemvalue="Spring Boot.CommonApplication" />
         <item itemvalue="Spring Boot.ZeusDemoApplication (1)" />
         <item itemvalue="Application.RpcClient" />
       </list>
@@ -274,7 +286,9 @@
       <workItem from="1578884120236" duration="16000" />
       <workItem from="1578884767894" duration="237000" />
       <workItem from="1578895689757" duration="10299000" />
-      <workItem from="1578981083642" duration="5120000" />
+      <workItem from="1578981083642" duration="9710000" />
+      <workItem from="1579348463535" duration="6082000" />
+      <workItem from="1579408920595" duration="10189000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <created>1577343490453</created>
@@ -423,7 +437,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578916354241</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="fix common">
+      <created>1578986588941</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1578986588941</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,10 +490,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578981785625" />
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1578981762478">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="612" y="162" key="#com.intellij.ide.util.MemberChooser" timestamp="1579422268091">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578981762478" />
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578987668365" />
+    <state x="612" y="162" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1579422268091" />
     <state x="597" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1578641705847">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -481,70 +503,83 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578902298463" />
-    <state x="870" y="526" width="490" height="514" key="#xdebugger.evaluate" timestamp="1578640261986">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="261" y="350" width="1157" height="408" key="#xdebugger.evaluate" timestamp="1579422242400">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="870" y="526" width="490" height="514" key="#xdebugger.evaluate/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578640261986" />
-    <state x="128" y="71" width="1614" height="826" key="CommitChangelistDialog2" timestamp="1578916351820">
+    <state x="261" y="350" width="1157" height="408" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1579422242400" />
+    <state x="128" y="71" width="1614" height="826" key="CommitChangelistDialog2" timestamp="1578986586947">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="128" y="71" width="1614" height="826" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578916351820" />
+    <state x="128" y="71" width="1614" height="826" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578986586947" />
     <state x="159" y="56" key="DiffContextDialog" timestamp="1578916307125">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="159" y="56" key="DiffContextDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578916307124" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1578885008670">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1578991639324">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578885008670" />
-    <state width="1877" height="294" key="GridCell.Tab.0.bottom" timestamp="1578982281604">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="740" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578991639324" />
+    <state width="1493" height="260" key="GridCell.Tab.0.bottom" timestamp="1579422709081">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="294" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578982281604" />
-    <state width="1877" height="294" key="GridCell.Tab.0.center" timestamp="1578982281604">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="277" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578991645254" />
+    <state width="1493" height="260" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579422709081" />
+    <state width="1493" height="260" key="GridCell.Tab.0.center" timestamp="1579422709081">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="294" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578982281604" />
-    <state width="1877" height="294" key="GridCell.Tab.0.left" timestamp="1578982281604">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="277" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578991645254" />
+    <state width="1493" height="260" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1579422709081" />
+    <state width="1493" height="260" key="GridCell.Tab.0.left" timestamp="1579422709081">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="294" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578982281604" />
-    <state width="1877" height="294" key="GridCell.Tab.0.right" timestamp="1578982281604">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="277" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578991645254" />
+    <state width="1493" height="260" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1579422709081" />
+    <state width="1493" height="260" key="GridCell.Tab.0.right" timestamp="1579422709081">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="294" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578982281604" />
-    <state width="1877" height="294" key="GridCell.Tab.1.bottom" timestamp="1578982281605">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="277" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578991645254" />
+    <state width="1493" height="260" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1579422709081" />
+    <state width="1493" height="260" key="GridCell.Tab.1.bottom" timestamp="1579422709081">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="294" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578982281605" />
-    <state width="1877" height="294" key="GridCell.Tab.1.center" timestamp="1578982281605">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="277" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578991645255" />
+    <state width="1493" height="260" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579422709081" />
+    <state width="1493" height="260" key="GridCell.Tab.1.center" timestamp="1579422709081">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="294" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578982281605" />
-    <state width="1877" height="294" key="GridCell.Tab.1.left" timestamp="1578982281604">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="277" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578991645255" />
+    <state width="1493" height="260" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1579422709081" />
+    <state width="1493" height="260" key="GridCell.Tab.1.left" timestamp="1579422709081">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="294" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578982281604" />
-    <state width="1877" height="294" key="GridCell.Tab.1.right" timestamp="1578982281605">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="277" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578991645254" />
+    <state width="1493" height="260" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1579422709081" />
+    <state width="1493" height="260" key="GridCell.Tab.1.right" timestamp="1579422709081">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="294" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578982281605" />
-    <state width="1877" height="294" key="GridCell.Tab.2.bottom" timestamp="1578982281605">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="277" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578991645255" />
+    <state width="1493" height="260" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1579422709081" />
+    <state width="1493" height="260" key="GridCell.Tab.2.bottom" timestamp="1579422709081">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="294" key="GridCell.Tab.2.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578982281605" />
-    <state width="1877" height="294" key="GridCell.Tab.2.center" timestamp="1578982281605">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="294" key="GridCell.Tab.2.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578991645245" />
+    <state width="1493" height="260" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579422709081" />
+    <state width="1493" height="260" key="GridCell.Tab.2.center" timestamp="1579422709081">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="294" key="GridCell.Tab.2.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578982281605" />
-    <state width="1877" height="294" key="GridCell.Tab.2.left" timestamp="1578982281605">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="294" key="GridCell.Tab.2.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578991645245" />
+    <state width="1493" height="260" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1579422709081" />
+    <state width="1493" height="260" key="GridCell.Tab.2.left" timestamp="1579422709081">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="294" key="GridCell.Tab.2.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578982281605" />
-    <state width="1877" height="294" key="GridCell.Tab.2.right" timestamp="1578982281605">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="294" key="GridCell.Tab.2.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578991645245" />
+    <state width="1493" height="260" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1579422709081" />
+    <state width="1493" height="260" key="GridCell.Tab.2.right" timestamp="1579422709081">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1877" height="294" key="GridCell.Tab.2.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578982281605" />
+    <state width="1877" height="294" key="GridCell.Tab.2.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578991645245" />
+    <state width="1493" height="260" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1579422709081" />
     <state x="490" y="175" key="Maven.ArtifactSearchDialog" timestamp="1578638043795">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -567,10 +602,11 @@
     </state>
     <state x="640" y="344" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578884124543" />
     <state x="239" y="104" width="910" height="520" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1578837160933" />
-    <state x="241" y="189" width="1355" height="754" key="find.popup" timestamp="1578903664120">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="193" y="150" width="1084" height="598" key="find.popup" timestamp="1579352288976">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="241" y="189" width="1355" height="754" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578903664120" />
+    <state x="241" y="189" width="1355" height="754" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578990298837" />
+    <state x="193" y="150" width="1084" height="598" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1579352288976" />
     <state x="334" y="215" width="1180" height="565" key="new project wizard" timestamp="1578981391024">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -735,11 +771,51 @@
           <option name="timeStamp" value="129" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/client/RpcClient.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="135" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/ContextRefreshedListener.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="131" />
+          <line>31</line>
+          <option name="timeStamp" value="138" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/CommonApplication.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="152" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/CommonApplication.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="153" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/dao/ServiceManager.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="154" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/dao/NamespaceManager.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="155" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/CommonApplication.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="156" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/zeus-common/src/main/java/com/antzuhl/zeus/dao/NamespaceManager.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="157" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/zeus$CommonApplication.ic" NAME="CommonApplication Coverage Results" MODIFIED="1579353407799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.antzuhl.zeus.*</FILTER>
+    </SUITE>
   </component>
 </project>

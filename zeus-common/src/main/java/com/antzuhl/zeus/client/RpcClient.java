@@ -15,6 +15,7 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.timeout.IdleStateHandler;
 import io.netty.util.concurrent.GlobalEventExecutor;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -23,17 +24,18 @@ import javax.annotation.PreDestroy;
 import java.util.concurrent.SynchronousQueue;
 
 @Component
+@Slf4j
 public class RpcClient {
 
-    public static ChannelGroup channels = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
+    private static RpcClient rpcClient;
 
-    Logger logger = LoggerFactory.getLogger(this.getClass());
+    public static ChannelGroup channels = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
 
     private EventLoopGroup group = new NioEventLoopGroup(1);
 
     private Bootstrap bootstrap = new Bootstrap();
 
-    public RpcClient() {
+    private RpcClient() {
         bootstrap.group(group).
                 channel(NioSocketChannel.class).
                 option(ChannelOption.TCP_NODELAY, true).
@@ -51,6 +53,14 @@ public class RpcClient {
 //        Object o  = send(new RpcRequest("1", "com.antzuhl.zeusdemo2.service.impl.DoSomething", "doHello", null, null));
     }
 
+    public static RpcClient getInstance() {
+        if (rpcClient != null) {
+            return rpcClient;
+        }
+        rpcClient = new RpcClient();
+        return rpcClient;
+    }
+
     public void doConnect(String addr, Integer port) throws InterruptedException {
         ChannelFuture future = bootstrap.connect(addr,port);
         Channel channel = future.sync().channel();
@@ -66,7 +76,6 @@ public class RpcClient {
 
     @PreDestroy
     public void destroy(){
-        logger.info("RPC客户端退出,释放资源!");
         group.shutdownGracefully();
     }
 
@@ -77,7 +86,7 @@ public class RpcClient {
             channel = ch;
         }
 
-        if (channel!=null && channel.isActive()) {
+        if (channel != null && channel.isActive()) {
             SynchronousQueue<Object> queue = new NettyClientHandler().sendRequest(request,channel);
             Object result = queue.take();
             return JSONArray.toJSONString(result);

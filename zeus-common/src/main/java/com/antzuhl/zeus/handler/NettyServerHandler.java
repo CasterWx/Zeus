@@ -22,10 +22,10 @@ import java.util.Map;
 @Slf4j
 public class NettyServerHandler extends ChannelInboundHandlerAdapter {
 
+    private static Logger log = LoggerFactory.getLogger(NettyServerHandler.class);
     @Autowired
     PropertiesCache propertiesCache;
 
-    private final Logger logger = LoggerFactory.getLogger(NettyServerHandler.class);
     private final Map<String, Object> serviceMap;
 
     public NettyServerHandler(Map<String, Object> serviceMap) {
@@ -33,11 +33,11 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
     }
 
     public void channelActive(ChannelHandlerContext ctx)   {
-        logger.info("客户端连接成功!"+ctx.channel().remoteAddress());
+        log.info("客户端连接成功: {} !", ctx.channel().remoteAddress());
     }
 
     public void channelInactive(ChannelHandlerContext ctx)   {
-        logger.info("客户端断开连接!{}",ctx.channel().remoteAddress());
+        log.info("客户端断开连接!{}",ctx.channel().remoteAddress());
         ctx.channel().close();
     }
 
@@ -45,9 +45,9 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
         RpcRequest request = JSON.parseObject(msg.toString(),RpcRequest.class);
 
         if ("heartBeat".equals(request.getMethodName())) {
-            logger.info("客户端心跳信息..."+ctx.channel().remoteAddress());
+            log.info("客户端心跳信息...{} ", ctx.channel().remoteAddress());
         } else {
-            logger.info("RPC客户端请求接口:"+request.getClassName()+"   方法名:"+request.getMethodName());
+            log.info("RPC客户端请求接口: {} 方法名: {}", request.getClassName(), request.getMethodName());
             RpcResponse response = new RpcResponse();
             int msgType = request.getType();
             response.setRequestId(request.getId());
@@ -66,7 +66,7 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
                 e.printStackTrace();
                 response.setCode(1);
                 response.setError_msg(e.toString());
-                logger.error("RPC Server handle request error",e);
+                log.error("RPC Server handle request error",e);
             }
             ctx.writeAndFlush(response);
         }
@@ -106,7 +106,7 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
         String registoryName = request.getClassName();
         String registoryValue = request.getMethodName();
         PropertiesCache.instance().put(registoryName, registoryValue);
-        logger.info("RPC客户端请求注册配置:"+request.getClassName()+"   配置值:"+request.getMethodName());
+        log.info("RPC客户端请求注册配置:"+request.getClassName()+"   配置值:"+request.getMethodName());
         return request.getClassName();
     }
 
@@ -133,7 +133,7 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
         if (evt instanceof IdleStateEvent){
             IdleStateEvent event = (IdleStateEvent)evt;
             if (event.state()== IdleState.ALL_IDLE){
-                logger.info("客户端已超过60秒未读写数据,关闭连接.{}",ctx.channel().remoteAddress());
+                log.info("客户端已超过60秒未读写数据,关闭连接.{}",ctx.channel().remoteAddress());
                 ctx.channel().close();
             }
         }else{
@@ -142,7 +142,7 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
     }
 
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause)   {
-        logger.info(cause.getMessage());
+        log.info(cause.getMessage());
         ctx.close();
     }
 }

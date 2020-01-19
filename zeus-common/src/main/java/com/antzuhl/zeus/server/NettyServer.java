@@ -10,6 +10,7 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.timeout.IdleStateHandler;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
@@ -24,7 +25,8 @@ import java.util.Map;
 @Component
 public class NettyServer implements ApplicationContextAware, InitializingBean {
 
-    private static final Logger logger = LoggerFactory.getLogger(NettyServer.class);
+    private static Logger log = LoggerFactory.getLogger(NettyServer.class);
+
     private static final EventLoopGroup bossGroup = new NioEventLoopGroup(1);
     private static final EventLoopGroup workerGroup = new NioEventLoopGroup(4);
 
@@ -40,11 +42,11 @@ public class NettyServer implements ApplicationContextAware, InitializingBean {
             Class<?>[] interfaces = clazz.getInterfaces();
             for (Class<?> inter : interfaces){
                 String interfaceName = inter.getName();
-                logger.info("加载服务类: {}", interfaceName);
+                log.info("加载服务类: {}", interfaceName);
                 serviceMap.put(interfaceName, serviceBean);
             }
         }
-        logger.info("已加载全部服务接口:{}", serviceMap);
+        log.info("已加载全部服务接口:{}", serviceMap);
     }
 
     public void afterPropertiesSet() throws Exception {
@@ -75,7 +77,7 @@ public class NettyServer implements ApplicationContextAware, InitializingBean {
                 String host = array[0];
                 int port = Integer.parseInt(array[1]);
                 ChannelFuture cf = bootstrap.bind(host,port).sync();
-                logger.info("RPC 服务器启动.监听端口:"+port);
+                log.info("RPC 服务器启动.监听端口{}", port);
                 //等待服务端监听端口关闭
                 cf.channel().closeFuture().sync();
             } catch (Exception e) {

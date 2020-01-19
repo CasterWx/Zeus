@@ -22,7 +22,7 @@ import java.util.concurrent.SynchronousQueue;
 @ChannelHandler.Sharable
 public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 
-    Logger logger = LoggerFactory.getLogger(this.getClass());
+    private static Logger logger = LoggerFactory.getLogger(NettyClientHandler.class);
 
     private static ConcurrentHashMap<String,SynchronousQueue<Object>> queueMap = new ConcurrentHashMap<>();
 

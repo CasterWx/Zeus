@@ -26,6 +26,9 @@ public class ContextRefreshedListener implements ApplicationListener<ContextRefr
             clazz = beanMap.get(key).getClass();
         }
 
+        if (clazz == null) {
+            return;
+        }
         ZeusRegistry zeusRegistry = clazz.getAnnotation(ZeusRegistry.class);
 
         if (zeusRegistry != null) {
