@@ -1,0 +1,11 @@
+{
+  "name": "zeus-api",
+  "version": "1.0.0",
+  "description": "Zeus API Document",
+  "title": "Zeus API Document",
+  "url": "https://api.zeus.com",
+  "template": {
+    "withCompare": true,
+    "withGenerator": true
+  }
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+	<display-name>zeus-gateway</display-name>
+
+	<servlet>
+		<servlet-name>AsyncZeusServlet</servlet-name>
+		<servlet-class>com.antzuhl.zeus.servlet.AsyncZeusServlet</servlet-class>
+		<async-supported>true</async-supported>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AsyncZeusServlet</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+
+	<listener>
+		<listener-class>com.antzuhl.zeus.servlet.InitializeServletListener</listener-class>
+	</listener>
+
+	<filter>
+		<filter-name>CatFilter</filter-name>
+		<filter-class>com.antzuhl.zeus.core.servlet.CatServletFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CatFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+    <servlet>
+        <servlet-name>scriptManager</servlet-name>
+        <servlet-class>com.antzuhl.zeus.core.filters.FilterScriptManagerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>scriptManager</servlet-name>
+        <url-pattern>/admin/scriptmanager</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>filterLoader</servlet-name>
+        <jsp-file>/admin/filterLoader.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>filterLoader</servlet-name>
+        <url-pattern>/admin/filterLoader.jsp</url-pattern>
+    </servlet-mapping>
+
+</web-app>

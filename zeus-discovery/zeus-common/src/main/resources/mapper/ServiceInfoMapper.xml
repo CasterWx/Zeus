@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.antzuhl.com.antzuhl.zeus.dao.ServiceInfoMapper">
+    <resultMap id="BaseResultMap" type="com.antzuhl.com.antzuhl.zeus.entity.ServiceInfo">
+        <id column="service_id" property="serviceId" jdbcType="INTEGER"/>
+        <result column="service_name" property="serviceName" jdbcType="VARCHAR"/>
+        <result column="service_addr" property="serviceAddr" jdbcType="VARCHAR"/>
+        <result column="living" property="living" jdbcType="INTEGER"/>
+        <result column="comment" property="comment" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    service_id, service_name, service_addr, living, comment
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from service_info
+        where service_id = #{serviceId,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from service_info
+    where service_id = #{serviceId,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.antzuhl.com.antzuhl.zeus.entity.ServiceInfo">
+    insert into service_info (service_id, service_name, service_addr, 
+      living, comment)
+    values (#{serviceId,jdbcType=INTEGER}, #{serviceName,jdbcType=VARCHAR}, #{serviceAddr,jdbcType=VARCHAR}, 
+      #{living,jdbcType=INTEGER}, #{comment,jdbcType=VARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="com.antzuhl.com.antzuhl.zeus.entity.ServiceInfo">
+        insert into service_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="serviceId != null">
+                service_id,
+            </if>
+            <if test="serviceName != null">
+                service_name,
+            </if>
+            <if test="serviceAddr != null">
+                service_addr,
+            </if>
+            <if test="living != null">
+                living,
+            </if>
+            <if test="comment != null">
+                comment,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="serviceId != null">
+                #{serviceId,jdbcType=INTEGER},
+            </if>
+            <if test="serviceName != null">
+                #{serviceName,jdbcType=VARCHAR},
+            </if>
+            <if test="serviceAddr != null">
+                #{serviceAddr,jdbcType=VARCHAR},
+            </if>
+            <if test="living != null">
+                #{living,jdbcType=INTEGER},
+            </if>
+            <if test="comment != null">
+                #{comment,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.antzuhl.com.antzuhl.zeus.entity.ServiceInfo">
+        update service_info
+        <set>
+            <if test="serviceName != null">
+                service_name = #{serviceName,jdbcType=VARCHAR},
+            </if>
+            <if test="serviceAddr != null">
+                service_addr = #{serviceAddr,jdbcType=VARCHAR},
+            </if>
+            <if test="living != null">
+                living = #{living,jdbcType=INTEGER},
+            </if>
+            <if test="comment != null">
+                comment = #{comment,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where service_id = #{serviceId,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.antzuhl.com.antzuhl.zeus.entity.ServiceInfo">
+    update service_info
+    set service_name = #{serviceName,jdbcType=VARCHAR},
+      service_addr = #{serviceAddr,jdbcType=VARCHAR},
+      living = #{living,jdbcType=INTEGER},
+      comment = #{comment,jdbcType=VARCHAR}
+    where service_id = #{serviceId,jdbcType=INTEGER}
+  </update>
+</mapper>

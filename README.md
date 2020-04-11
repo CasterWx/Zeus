@@ -2,17 +2,39 @@
 <img src="https://images.cnblogs.com/cnblogs_com/LexMoon/1524728/o_191231122929logo.png" alt="Zeus">
 </p>
 
-![](https://img.shields.io/badge/zeus-1.0-orange)       ![](https://img.shields.io/badge/license-apache-brightgreen)
+![](https://img.shields.io/badge/zeus-2.0-orange)       ![](https://img.shields.io/badge/license-apache-brightgreen)
 
 ### 介绍
 
-Zeus可以用于服务发现，服务治理，负载均衡，服务容错，服务调用，API网关，配置中心。
+Zeus可以用于API网关，服务发现，服务调用，熔断限流，日志统计。
 
 理念是用最简单的方式使用。
 
-(项目更多功能正在开发中)
 
-[让我知道您正在使用Zeus。](https://github.com/CasterWx/Zeus/issues/1)
+#### API网关
+
+运行部署zeus-gateway项目，访问`http://api.zeus.com/zeus-gateway/admin/filterLoader.jsp`进入过滤器管理界面。
+
+分别添加需要的前置/后置过滤器。
+
+系统内置路由:
+
+| Type | Name | Comment |
+| -------- | -------- | -------- |
+| pro | DebugModeSetter | 调试模式 |
+| pro | DebugRequest | 请求调试 |
+| pro | HealthCheck | 健康检查 |
+| pro | TestRoute | 路由选择 |
+| route | ExecuteRoute | 路由分发(核心) |
+| post | AddTimeStamp | 添加时间戳 |
+| post | DebugHeader | 请求头调试 |
+| post | DebugResponse | 返回体调试 |
+| post | SendResponse | 返回体配置 |
+| post | Stats | 状态反馈 |
+
+* 测试路由状态
+
+http://api.zeus.com/zeus-gateway/api/{serviceName}/{serviceRequestPath}?params
 
 #### 服务注册
 
@@ -20,15 +42,14 @@ Zeus可以用于服务发现，服务治理，负载均衡，服务容错，服�
 
 引入`zeus-client`模块，在启动类添加`@ZeusRegistry`标签即可。
 
-* registryName ：命名空间(集群管理)
-* zkAddr ：zookeeper地址
-* serverName ：服务名称
-* serverAddr ：服务注册地址
+* serverName ：服务名
+* serverAddr ：注册中心地址
+* comment ：服务描述
 
 ```java
 @SpringBootApplication
-@ZeusRegistry(registryName = "user-center", zkAddr = "192.168.124.16:2181",
-        serverName = "server-1", serverAddr = "48.89.13.53:8080")
+@ZeusProperty(serverName = "domain", 
+    serverAddr = "127.0.0.1", comment = "管理服务")
 public class ZeusDemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(ZeusDemoApplication.class, args);
@@ -38,46 +59,35 @@ public class ZeusDemoApplication {
 
 #### 服务发现
 
-![](https://img.shields.io/badge/Get-%2Fv1%2Fnode%2Fnamespaces-red)
+![](https://img.shields.io/badge/Get-%2Fservice%2FqueryService-red)
 
-* http://localhost:5454/v1/node/namespaces
+* https://api.zeus.com/zeus-server/service/queryService
 
 > requestMethod : `Get`
 
 获取所有集群名。
 
 ```json
-{
-  "code":200,
-  "message":"OK",
-  "data":[
-    "user-center2","user-center1","user-center3"
-  ]
-}
+[
+    {
+        "id": 1,
+        "serviceName": "domain",
+        "serviceAddr": "127.0.0.1",
+        "port": 8888,
+        "living": 1,
+        "comment": "管理服务"
+    },
+    {
+        "id": 2,
+        "serviceName": "RpcDemo",
+        "serviceAddr": "127.0.0.1",
+        "port": 8881,
+        "living": 1,
+        "comment": "远程服务"
+    }
+]
 ```
 
-![](https://img.shields.io/badge/Get-server-red)
-
-* http://localhost:5454/v1/node/server?namespace=param
-
-> requestMethod : `Get`
-
-获取指定集群下的所有服务节点信息。
-
-> response
-
-```json
-{
-  "code":200,
-  "message":"OK",
-  "data":[{
-    "nameSpace":"user-center1",
-    "serverName":"server-1",
-    "data":"126",
-    "path":"/registry/user-center1/server-1"
-    }]
-  }
-```
 
 #### 接口监控
 
@@ -144,4 +154,3 @@ public class HelloService {
 ![](https://images.cnblogs.com/cnblogs_com/LexMoon/1524728/o_191231123606request.png)
 
 RpcRequest中参数为消息ID，实例类，方法，参数类型列表，参数值列表。
-

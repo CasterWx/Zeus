@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: zeus-server
+  datasource:
+    url: jdbc:sqlite:c:\\zeus-server.sqlite3
+    driver-class-name: org.sqlite.JDBC
+    username:
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+    database-platform: com.antzuhl.zeus.config.SQLiteDialect
+#  security:
+#    user:
+#      name: zeus
+#      password: zeus
+server:
+  port: 7777

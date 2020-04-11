@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="zeus-server" />
+        <module name="zeus-auth" />
+        <module name="zeus-core" />
+        <module name="zeus-common" />
+        <module name="zeus-rpc-example" />
+        <module name="zeus-example" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
