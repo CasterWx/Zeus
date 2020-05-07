@@ -10,6 +10,8 @@ Zeus可以用于API网关，服务发现，服务调用，熔断限流，日志�
 
 理念是用最简单的方式使用。
 
+(该项目的另一种思路，实现最强大的后台代理，高可用的翻墙服务，https://github.com/CasterWx/Back-end-Broker)
+
 
 #### API网关
 
