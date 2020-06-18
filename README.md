@@ -15,26 +15,9 @@ Zeus可以用于API网关，服务发现，服务调用，熔断限流，日志�
 
 #### API网关
 
-运行部署zeus-gateway项目，访问`http://api.zeus.com/zeus-gateway/admin/filterLoader.jsp`进入过滤器管理界面。
+运行部署zeus-gateway项目，分别添加需要的前置/后置过滤器。
 
-分别添加需要的前置/后置过滤器。
-
-系统内置路由:
-
-| Type | Name | Comment |
-| -------- | -------- | -------- |
-| pro | DebugModeSetter | 调试模式 |
-| pro | DebugRequest | 请求调试 |
-| pro | HealthCheck | 健康检查 |
-| pro | TestRoute | 路由选择 |
-| route | ExecuteRoute | 路由分发(核心) |
-| post | AddTimeStamp | 添加时间戳 |
-| post | DebugHeader | 请求头调试 |
-| post | DebugResponse | 返回体调试 |
-| post | SendResponse | 返回体配置 |
-| post | Stats | 状态反馈 |
-
-* 测试路由状态
+访问： 
 
 http://api.zeus.com/zeus-gateway/api/{serviceName}/{serviceRequestPath}?params
 
